@@ -1,0 +1,34 @@
+#클래스를 생성하고, 생성자와 메서드를 사용하여 데이터를 캡슐화하고 출력
+
+import java.util.Scanner;
+
+class Song {
+    private String title;
+    private String artist;
+    private int year;
+    private String country;
+
+    public Song() {
+    }
+
+    public Song(String t, String a, int y, String c) {
+        title = t;
+        artist = a;
+        year = y;
+        country = c;
+    }
+
+    public void show() {
+        System.out.println( year + "년 " + country + "국적의 " + artist + "가 부른 " + title);
+
+    }
+}
+
+public class Practice_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Song song = new Song("Dancing Queen", "ABBA", 1987, "스웨덴");
+        song.show();
+    }
+}
