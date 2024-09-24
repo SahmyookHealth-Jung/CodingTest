@@ -1,0 +1,36 @@
+# 클래스를 통해 점수를 입력받아 평균을 계산하고 출력
+
+import java.util.Scanner;
+
+class Grade {
+    private int math;
+    private int science;
+    private int engilsh;
+    
+    public Grade(int math, int science, int engilsh) {
+        this.math = math;
+        this.science = science;
+        this.engilsh = engilsh;
+    }
+
+    public int average() {
+        return (math + science + engilsh) / 3;
+    }
+}
+
+    public class Practice {
+    
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+        
+            System.out.println("수학, 과학, 영어 순으로 3개의 점수 입력");
+            int math = scanner.nextInt();
+            int science = scanner.nextInt();
+            int engilsh = scanner.nextInt();
+            Grade me = new Grade(math, science, engilsh);
+            System.out.println("평균은" + me.average());
+        
+            scanner.close();
+           }   
+        }
+    
