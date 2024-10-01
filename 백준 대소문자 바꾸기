@@ -1,0 +1,27 @@
+# 영어 소문자와 대문자로 이루어진 단어를 입력받은 뒤, 대문자는 소문자로, 소문자는 대문자로 바꾸어 출력하는 프로그램을 작성하시오.
+
+import java.util.Scanner;
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String s = sc.nextLine();
+
+        char[] chars = s.toCharArray();
+        for (char c : chars) {
+            if (Character.isUpperCase(c)) {
+                c= Character.toLowerCase(c);
+            }
+            else if (Character.isLowerCase(c)) {
+                c= Character.toUpperCase(c);
+            }
+            else if (s.length()>100) {
+                System.out.println("단어의 길이는 최대 100자 입니다.");
+            }
+            System.out.print(c);
+        }
+
+    }
+}
